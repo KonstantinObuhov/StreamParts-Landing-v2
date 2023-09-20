@@ -1,6 +1,6 @@
 # Streamparts landing
 
-To install project run: `npm i --legacy-peer-deps`
+To install project run: `npm i`
 
 Build commands
 
