@@ -14,7 +14,7 @@
     "dev:parcel": "parcel ./src/*.html --open --target default",
     "dev:css": "tailwindcss -i ./src/css/index.scss -o ./dist/css/index.css --watch",
     "build": "npm-run-all build:css build:parcel",
-    "build-gh-pages": "npm-run-all build:css build:parcel-gh-pages",
+    "build-gh-pages": "npm-run-all build:css build-gh-pages:parcel",
     "build:parcel": "parcel build ./src/*.html",
     "build-gh-pages:parcel": "parcel build ./src/*.html --public-url /StreamParts-Landing-v2/",
     "build:css": "tailwindcss -i ./src/css/index.scss -o ./dist/css/index.css --minify",
