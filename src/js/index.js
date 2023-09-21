@@ -1,14 +1,14 @@
-// import 'jquery';
-
-import "./components/fullpage4/dist/fullpage.js";
-import "./components/fullpage4/dist/fullpage.css";
 import Menu from "./components/menu";
 import Tabs from "./components/tabs";
-import Sliders from './components/sliders';
-// import 'select2/dist/js/select2';
+import sliders from './components/sliders';
+import $ from 'jquery';
+import select2 from "select2";
+
+select2($);
+window.$ = window.jQuery = $;
 
 window.addEventListener("load", function () {
-
+  sliders();
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
