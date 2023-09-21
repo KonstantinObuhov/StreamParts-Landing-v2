@@ -3,15 +3,23 @@
   "homepage": "https://KonstantinObuhov.github.io/StreamParts-Landing-v2",
   "version": "0.0.1",
   "description": "streamparts-landing",
+
+  "browserslist": [
+    "last 5 versions",
+    "> 0.2%",
+    "not dead"
+  ],
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
-    "dev:parcel": "parcel ./src/*.html --open",
+    "dev:parcel": "parcel ./src/*.html --open --target default",
     "dev:css": "tailwindcss -i ./src/css/index.scss -o ./dist/css/index.css --watch",
     "build": "npm-run-all build:css build:parcel",
-    "build:parcel": "parcel build ./src/*.html --public-url /StreamParts-Landing-v2/",
+    "build-gh-pages": "npm-run-all build:css build:parcel-gh-pages",
+    "build:parcel": "parcel build ./src/*.html",
+    "build-gh-pages:parcel": "parcel build ./src/*.html --public-url /StreamParts-Landing-v2/",
     "build:css": "tailwindcss -i ./src/css/index.scss -o ./dist/css/index.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build-gh-pages",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
