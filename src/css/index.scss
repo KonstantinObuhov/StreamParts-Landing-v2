@@ -73,8 +73,8 @@
   .linkNav--white.active{
     @apply text-white;
   }
-  .aboutSlides__slide{
-    @apply flex items-center 2xl:gap-x-[140px] 2xl:pl-[180px] lg:gap-x-[100px] lg:pl-[120px] 3xs:gap-x-[10px] sm:pl-[50px] sm:flex-row 3xs:flex-col-reverse sm:pb-0 3xs:pb-[80px];
+  .about-slide{
+    @apply flex items-center  2xl:pl-[180px]  lg:pl-[120px]  sm:pl-[50px] sm:flex-row 3xs:flex-col-reverse sm:pb-0 3xs:pb-[80px];
   }
   .btn-primary {
     @apply border border-orange text-center text-sm rounded-lg bg-orange text-white;
@@ -108,16 +108,22 @@
   }
 
   .tabs {
-    @apply  w-full 2xl:mt-[50px] 3xs:mt-[30px];
+    @apply  w-full 2xl:mt-[50px] 3xs:mt-[15px];
     
   }
 
   .tab-nav-items {
-    @apply flex justify-center lg:flex-nowrap 3xs:flex-wrap xl:gap-7 lg:gap-[40px] 3xs:gap-[15px] text-center;
+    @apply flex justify-center lg:flex-nowrap 3xs:flex-wrap text-center;
   }
 
   .tab-nav-item {
-    @apply cursor-pointer border-[#DCE0E8] border-[1px] rounded-xl p-6 flex flex-col justify-between lg:h-[176px] xl:w-[18%] lg:w-[25%] 3xs:w-[48%] 3xs:h-[auto] transition ease-in-out duration-[0.38s] hover:bg-[#DCE0E8];
+    @apply cursor-pointer border-[#DCE0E8] border-[1px] xl:mr-7 lg:mr-[40px] lg:mt-[0px] 3xs:mt-[15px] 3xs:mr-[15px] rounded-xl p-6 flex flex-col justify-between xl:w-[18%] lg:w-[25%] 3xs:w-[48%] transition ease-in-out duration-[0.38s] hover:bg-[#DCE0E8];
+  }
+  .tab-nav-item:nth-child(2n){
+    @apply xl:mr-7 lg:mr-[40px] 3xs:mr-0;
+  }
+  .tab-nav-item:last-child{
+    @apply xl:mr-0 lg:mr-0 3xs:mr-0;
   }
   .tab-nav-item.active{
     @apply bg-white border-white pointer-events-none;
@@ -173,7 +179,6 @@
     -ms-user-select: none;
     user-select: none;
     flex-direction: column;
-    gap: 5px;
   }
 
   #menu-burger span {
@@ -182,10 +187,14 @@
     width: 20px;
     height: 2px;
     border-radius: 16px;
+    margin-top: 5px;
     -webkit-transform-origin: center;
     transform-origin: left;
     -webkit-transition: all 0.38s ease 0s;
     transition: all 0.38s ease 0s;
+  }
+  #menu-burger span:first-child{
+    margin-top: 0;
   }
 
 
@@ -525,70 +534,61 @@
 .swiper-pagination-bullet-active{
   opacity: 1;
 }
-.paginationBeliverySlides.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+.delivery-pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
   margin: 0 11px;
 }
-.aboutSlides__pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet{
+.about-pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet{
   margin: 22px 0;
 }
-.aboutSlides__pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+.about-pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
   margin: 0 11px;
 }
-.aboutSlides__pagination.swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets{
+.about-pagination.swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets{
   left: 0;
   width: fit-content;
 }
-.deliverySlides:after{
-  content: '';
+.delivery .swiper-slide{
+  position: relative;
+}
+.delivery .swiper-slide-active+.swiper-slide-next::before{
+  content: "";
   background: #224BB7;
   filter: blur(34px);
   position: absolute;
   top: 0;
   height: 100%;
-  left: -185px;
+  right: 0px;
+  width: 50%;
   z-index: 1;
 }
-.deliverySlides::before{
-  content: '';
+.delivery .swiper-slide-prev::before{
+  content: "";
   background: #224BB7;
   filter: blur(34px);
   position: absolute;
   top: 0;
   height: 100%;
-  right: -185px;
+  left: 0px;
   z-index: 2;
+  width: 50%;
 }
 
-@media (width >= 768px){
-  .deliverySlides:after, .deliverySlides::before{
-    width: 35%;
-  }
-}
-@media (width >= 1024px){
-  .deliverySlides:after, .deliverySlides::before{
-    width: 30%;
-  }
-}
-@media (width >= 1280px){
-  .deliverySlides:after, .deliverySlides::before{
-    width: 25%;
-  }
-}
-.geographySlider__slide{
+
+.geography-slide{
   @apply relative w-full h-full;
 }
-.geographySlider__slide::before{
+.geography-slide::before{
   content: '';
   background: linear-gradient(70deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 45.75%), linear-gradient(111deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 47.51%);
   @apply absolute w-full h-full top-0 left-0 z-[2];
 }
-.geographySlider__img{
+.geography-img{
   @apply w-full h-full object-cover object-top;
 }
-.geographySlider__nav{
-  @apply absolute 2xl:top-[170px] lg:top-[50px] 3xs:top-[30px] z-[2];
+.geography-nav{
+  @apply absolute 2xl:top-[170px] lg:top-[50px] 3xs:top-[30px] z-[10];
 }
-.geographySlider__box{
+.geography-box{
   @apply absolute 2xl:bottom-[100px] lg:bottom-[50px] 3xs:bottom-[30px] z-[2];
 
 }
@@ -617,11 +617,11 @@
   background: hsla(0, 0%, 100%, 0.5);
  
 }
-.geographySlider__pagination{
+.geography-pagination{
   display: flex;
   
 }
-.geographySlider .swiper-pagination-bullet-custom {
+.geography-pagination .swiper-pagination-bullet-custom {
 
   width: 80px;
   height: 2px;
@@ -632,11 +632,11 @@
 
 
 
-.geographySlider .swiper-pagination-bullet-custom:not(:last-child) {
+.geography-pagination .swiper-pagination-bullet-custom:not(:last-child) {
   margin-right: 14px;
 }
 
-.geographySlider .swiper-pagination-bullet-custom svg {
+.geography-pagination .swiper-pagination-bullet-custom svg {
   background-color: rgba(255,255,255,.5);
   width: 80px;
   height: 2px;
@@ -646,20 +646,22 @@
   @apply 3xs:mt-[15px];
   
 }
-.geographySlider .swiper-pagination-bullet-custom--active svg {
+.geography-pagination .swiper-pagination-bullet-custom--active svg {
   display: block;
 }
 
-.geographySlider .swiper-pagination-bullet-custom--active svg line {
+.geography-pagination .swiper-pagination-bullet-custom--active svg line {
   stroke-dasharray: 79;
   stroke-dashoffset: 79;
   animation: BulletProgress calc(var(--delay) * 1ms) linear forwards;
 }
 
-.geographySlider .swiper-pagination-bullet-custom--active::before {
+.geography-pagination .swiper-pagination-bullet-custom--active::before {
   background-color: #fff;
 }
-
+.geography .swiper-wrapper{
+  z-index: -1;
+}
 @keyframes BulletProgress {
   to {
     stroke-dashoffset: 0;
@@ -672,7 +674,7 @@
 .close{
   @apply top-[-100%];
 }
-.geographySlider .swiper--pause .swiper-pagination-bullet-custom--active svg circle {
+.geography .swiper--pause .swiper-pagination-bullet-custom--active svg circle {
   animation: none;
 }
 .fp-watermark{
@@ -752,4 +754,7 @@
 .select2-results__option{
   display: flex;
   align-items: center;
+}
+.section{
+  -webkit-transform: translate3d(0, 0, 0)
 }

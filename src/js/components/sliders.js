@@ -15,6 +15,10 @@ export default function () {
             loop: true,
             centeredSlides: true,
             effect: "creative",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: '.paginationBeliverySlides',
                 clickable:true,
@@ -105,14 +109,6 @@ export default function () {
                     element.setAttribute("x2", "0");
                 });
                 document.querySelector(".swiper-pagination-bullet-custom.swiper-pagination-bullet-custom--active line")?.setAttribute("x2", "80");
-                // _self.el.addEventListener('mouseenter', function() {
-                //   _self.el.classList.add('swiper--pause');
-                //   _self.autoplay.stop();
-                // });
-                // _self.el.addEventListener('mouseleave', function() {
-                //   _self.el.classList.remove('swiper--pause');
-                //   _self.autoplay.start();
-                // });
             },
             slideChange: function(){
                 document.querySelectorAll(".swiper-pagination-bullet-custom line").forEach(element => {
@@ -141,6 +137,27 @@ export default function () {
                     geographySlider.slideToLoop(0,0)
                 }
             },
+        })
+    }
+    if (window.innerWidth <= 1366) {
+        window.addEventListener("scroll", function() {
+          var block_show = null;
+          var wt = $(window).scrollTop();
+          var wh = $(window).height();
+          var et = $('.footer').offset().top;
+          var eh = $('.footer').outerHeight();
+         
+          if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+            if (block_show == null || block_show == false) {
+              header.classList.add("close");
+            }
+            block_show = true;
+          } else {
+            if (block_show == null || block_show == true) {
+              header.classList.remove("close");
+            }
+            block_show = false;
+          }
         })
     }
 }

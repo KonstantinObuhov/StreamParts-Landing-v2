@@ -1,45 +1,70 @@
-<section class="bg-[#EBEDF2] flex items-center 2xl:h-screen 3xs:h-auto">
+<section class="bg-gray2 flex items-center">
   <div class="container containerMin px-[50px] xl:pt-[50px] xl:pb-[50px] 3xs:py-[30px] xs:px-[30px] 3xs:px-[12px] mx-auto">
     <h2 class="xl:text-[34px] xs:text-[28px] 3xs:text-[24px] font-medium leading-normal text-black text-center">Сервисы, доступные в личном кабинете</h2>
       <nav class="tabs">
         <ul class="tab-nav-items sm:flex 3xs:hidden">
           <li class="tab-nav-item active" data-tab="tab-1">
             <img src="/src/img/index/tabs/tab-1.svg" alt="" class="w-[24px] h-[24px] object-contain pointer-events-none">
-            <div class="leading-7 text-left pointer-events-none lg:mt-[0] 3xs:mt-[20px]">Поисковый <br />агрегатор</div>
+            <div class="leading-7 text-left pointer-events-none lg:mt-[40px] 3xs:mt-[20px]">Поисковый <br />агрегатор</div>
           </li>
           <li class="tab-nav-item" data-tab="tab-2">
             <img src="/src/img/index/tabs/tab-2.svg" alt="" class="w-[24px] h-[24px] object-contain pointer-events-none">
-            <div class="leading-7 text-left pointer-events-none lg:mt-[0] 3xs:mt-[20px]">Система обработки запросов</div>
+            <div class="leading-7 text-left pointer-events-none lg:mt-[40px] 3xs:mt-[20px]">Система обработки запросов</div>
           </li>
           <li class="tab-nav-item" data-tab="tab-3">
             <img src="/src/img/index/tabs/tab-3.svg" alt="" class="w-[24px] h-[24px] object-contain pointer-events-none">
-            <div class="leading-7 text-left pointer-events-none">Каталог азиатских производителей</div>
+            <div class="leading-7 text-left pointer-events-none lg:mt-[40px] 3xs:mt-[20px]">Каталог азиатских производителей</div>
           </li>
           <li class="tab-nav-item" data-tab="tab-4">
             <img src="/src/img/index/tabs/tab-4.svg" alt="" class="w-[24px] h-[24px] object-contain pointer-events-none">
-            <div class="leading-7 text-left pointer-events-none lg:mt-[0] 3xs:mt-[20px]">Журнал <br />заказов</div>
+            <div class="leading-7 text-left pointer-events-none lg:mt-[40px] 3xs:mt-[20px]">Журнал <br />заказов</div>
           </li>
         </ul>
         <select name="" id="" class="select tab-nav-items sm:hidden 3xs:block">
-          <option class="tab-nav-item active" data-tab="tab-1" value="tab-1" data-image="/src/img/index/tabs/tab-1.svg">
+          <option class="tab-nav-item active" data-tab="tab-1" value="tab-1">
             <div class="leading-7 text-left pointer-events-none">Поисковый агрегатор</div>
           </option>
-          <option class="tab-nav-item" data-tab="tab-2" value="tab-2" data-image="/src/img/index/tabs/tab-2.svg">
+          <option class="tab-nav-item" data-tab="tab-2" value="tab-2">
             <div class="leading-7 text-left pointer-events-none">Система обработки запросов</div>
           </option>
-          <option class="tab-nav-item" data-tab="tab-3" value="tab-3" data-image="/src/img/index/tabs/tab-3.svg">
+          <option class="tab-nav-item" data-tab="tab-3" value="tab-3">
             <div class="leading-7 text-left pointer-events-none">Каталог азиатских производителей</div>
           </option>
-          <option class="tab-nav-item" data-tab="tab-4" value="tab-4" data-image="/src/img/index/tabs/tab-4.svg">
+          <option class="tab-nav-item" data-tab="tab-4" value="tab-4">
             <div class="leading-7 text-left pointer-events-none">Журнал <br />заказов</div>
           </option>
         </select>
+        <template id="template-1" data-template="tab-1">
+          <img src="/src/img/index/tabs/tab-1.svg" class="w-[24px] h-[24px] mr-[8px] object-contain pointer-events-none" /> 
+          <div class="leading-7 text-left pointer-events-none">
+            Поисковый агрегатор
+          </div>
+        </template>
+        <template id="template-2" data-template="tab-2">
+          <img src="/src/img/index/tabs/tab-2.svg" class="w-[24px] h-[24px] mr-[8px] object-contain pointer-events-none" /> 
+          <div class="leading-7 text-left pointer-events-none">
+            Система обработки запросов
+          </div>
+        </template>
+        <template id="template-3" data-template="tab-3">
+          <img src="/src/img/index/tabs/tab-3.svg" class="w-[24px] h-[24px] mr-[8px] object-contain pointer-events-none" /> 
+          <div class="leading-7 text-left pointer-events-none">
+            Каталог азиатских производителей
+          </div>
+        </template>
+        <template id="template-4" data-template="tab-4">
+          <img src="/src/img/index/tabs/tab-4.svg" class="w-[24px] h-[24px] mr-[8px] object-contain pointer-events-none" /> 
+          <div class="leading-7 text-left pointer-events-none">
+            Журнал заказов
+          </div>
+        </template>
       </nav>
 
     <div id="tab-1" data-id="select2--result-wyte-tab-1" class="tab-content current">
-      <div class="flex items-center gap-x-10 lg:flex-row 3xs:flex-col">
-        <div class="relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px] after:absolute after:3xs:w-full after:h-full after:bottom-0 gradient">
-          <img class="w-full absolute h-full sm:object-contain 3xs:object-cover" src="/src/img/index/Group 342220.png" alt="Macbook Preview" />
+      <div class="flex items-center lg:flex-row 3xs:flex-col">
+        <div class="lg:mr-10 relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px] ">
+          <img class="w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/Group 342220.svg" alt="Macbook Preview" />
+          <img class="absolute w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/gradient.svg" alt="Macbook Preview" />
         </div>
         <ul class="lg:w-2/5 3xs:w-full">
           <li class="list-item-square text-black text-sm">50 + источников в поисковой выдаче</li>
@@ -57,9 +82,10 @@
       </div>
     </div>
     <div id="tab-2" data-id="select2--result-wyte-tab-2" class="tab-content">
-      <div class="flex items-center gap-x-10 lg:flex-row 3xs:flex-col">
-        <div class="relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px]  after:absolute after:3xs:w-full after:h-full after:bottom-0 gradient">
-          <img class="w-full absolute h-full sm:object-contain 3xs:object-cover" src="/src/img/index/tabs/Group 342220.png" alt="Macbook Preview" />
+      <div class="flex items-center lg:flex-row 3xs:flex-col">
+        <div class="lg:mr-10 relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px]">
+          <img class="w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/Group 342220 1.svg" alt="Macbook Preview" />
+          <img class="absolute w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/gradient.svg" alt="Macbook Preview" />
         </div>
         <ul class="lg:w-2/5 3xs:w-full">
           <li class="list-item-square text-black text-sm">Дополнительные источники складского наличия в Китае</li>
@@ -74,9 +100,10 @@
       </div>
     </div>
     <div id="tab-3" data-id="select2--result-wyte-tab-3" class="tab-content">
-      <div class="flex items-center gap-x-10 lg:flex-row 3xs:flex-col">
-        <div class="relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px] after:absolute after:3xs:w-full after:h-full after:bottom-0 gradient">
-          <img class="w-full absolute h-full sm:object-contain 3xs:object-cover" src="/src/img/index/tabs/Group 342220 1.png" alt="Macbook Preview" />
+      <div class=" flex items-center lg:flex-row 3xs:flex-col">
+        <div class="lg:mr-10 relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px]">
+          <img class="w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/Group 342220 2.svg" alt="Macbook Preview" />
+          <img class="absolute w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/gradient.svg" alt="Macbook Preview" />
         </div>
         <ul class="lg:w-2/5 3xs:w-full">
           <li class="list-item-square text-black text-sm">Параметрический поиск</li>
@@ -92,9 +119,10 @@
       </div>
     </div>
     <div id="tab-4" data-id="select2--result-wyte-tab-4" class="tab-content">
-      <div class="flex items-center gap-x-10 lg:flex-row 3xs:flex-col">
-        <div class="relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px] after:absolute after:3xs:w-full after:h-full after:bottom-0 gradient">
-          <img class="w-full absolute h-full sm:object-contain 3xs:object-cover" src="/src/img/index/tabs/Group 342220 1.png" alt="Macbook Preview" />
+      <div class="flex items-center lg:flex-row 3xs:flex-col">
+        <div class="lg:mr-10 relative 3xs:flex 3xs:justify-center lg:mb-[0] 3xs:mb-[20px] sm:w-3/5 3xs:w-full xl:h-[385px] lg:h-[313px] md:h-[231px] sm:h-[195px] 2xs:h-[193px] 425xs:h-[221px] 3xs:h-[161px]">
+          <img class="w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/Group 342220 3.svg" alt="Macbook Preview" />
+          <img class="absolute w-full h-full sm:object-contain 3xs:object-contain" src="/src/img/index/tabs/gradient.svg" alt="Macbook Preview" />
         </div>
         <ul class="lg:w-2/5 3xs:w-full">
           <li class="list-item-square text-black text-sm">Отслеживание статусов размещенных заказов</li>
