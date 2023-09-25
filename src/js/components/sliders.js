@@ -9,8 +9,8 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 
 export default function () {
-    if(document.querySelector(".deliverySlides")){
-        const deliverySlide = new Swiper('.deliverySlides', {
+    if(document.querySelector(".delivery")){
+        const delivery = new Swiper('.delivery', {
             modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
             loop: true,
             centeredSlides: true,
@@ -20,7 +20,7 @@ export default function () {
                 disableOnInteraction: false,
             },
             pagination: {
-                el: '.paginationBeliverySlides',
+                el: '.delivery-pagination',
                 clickable:true,
             },
             creativeEffect:{
@@ -62,14 +62,14 @@ export default function () {
             }
         });
     }
-    if(document.querySelector(".aboutSlides")){
-        const aboutSlides = new Swiper('.aboutSlides', {
+    if(document.querySelector(".about")){
+        const about = new Swiper('.about', {
             modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
             slidesPerView: 1,
             loop: true,
 
             pagination: {
-                el: '.aboutSlides__pagination',
+                el: '.about-pagination',
                 clickable:true,
             },
             breakpoints: {
@@ -79,7 +79,7 @@ export default function () {
             }
         });
     }
-    const geographySlider = new Swiper('.geographySlider', {
+    const geography = new Swiper('.geography', {
         modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
         effect: "fade",
         loop:true,
@@ -89,7 +89,7 @@ export default function () {
             disableOnInteraction: false,
         },
         pagination: {
-            el: '.geographySlider__pagination',
+            el: '.geography-pagination',
             bulletClass: 'swiper-pagination-bullet-custom',
             bulletActiveClass: 'swiper-pagination-bullet-custom--active',
             renderBullet: function(index, className) {
@@ -130,11 +130,11 @@ export default function () {
                 else if(document.querySelector(".header.close")){
                     header.classList.remove("close");
                 }
-                if (document.querySelector(".fp-viewing-1") && document.querySelector(".geographySlider")) {
-                    geographySlider.slideToLoop(0,0)
+                if (document.querySelector(".fp-viewing-1") && document.querySelector(".geography")) {
+                    geography.slideToLoop(0,0)
                 }
-                if (document.querySelector(".fp-viewing-3") && document.querySelector(".geographySlider")) {
-                    geographySlider.slideToLoop(0,0)
+                if (document.querySelector(".fp-viewing-3") && document.querySelector(".geography")) {
+                    geography.slideToLoop(0,0)
                 }
             },
         })
