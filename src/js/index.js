@@ -25,8 +25,8 @@ window.addEventListener("load", function () {
   var container = document.querySelector(".containerMin");
   var domRect
   var result
-  let box = document.querySelectorAll(".geographySlider__box");
-  let nav = document.querySelectorAll(".geographySlider__nav");
+  let box = document.querySelectorAll(".geography-box");
+  let nav = document.querySelectorAll(".geography-nav");
   if (container){
       domRect = container.getBoundingClientRect(); 
       if(window.innerWidth > 768){
