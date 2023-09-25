@@ -20,6 +20,7 @@ module.exports = {
       orange: "#ff4f32",
       orangeSecondary: "#FF5C00",
       darkBlue: "#224BB7",
+      gray2: "#EBEDF2",
     },
     extend: {
       fontFamily: {
