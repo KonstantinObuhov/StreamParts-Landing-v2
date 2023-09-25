@@ -75,11 +75,8 @@ window.addEventListener("load", function () {
     if (!state.id) {
       return state.text;
     }
-    var baseUrl = $(state.element).data('image'); ;
-    var $state = $(
-      '<img src="' + baseUrl + '" class="w-[24px] h-[24px] mr-[8px] object-contain pointer-events-none" /> <div class="leading-7 text-left pointer-events-none">' + state.text + '</div>'
-    );
-    return $state;
+    let template = $($(`[data-template="${state.id}"]`).html());
+    return template;
   };
   if(window.innerWidth < 640){
     $('.select').select2({
@@ -102,14 +99,5 @@ window.addEventListener("load", function () {
       
    });
   }
-  if(document.title == 'Главная'){
-    $('#index').addClass('active');
-    $('#indexFooter').addClass('active');
-    $('#indexMobile').addClass('active');
-  }
-  else if(document.title == 'О компании'){
-    $('#about').addClass('active');
-    $('#aboutFooter').addClass('active');
-    $('#aboutMobile').addClass('active');
-  }
+
 });

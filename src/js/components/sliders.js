@@ -9,14 +9,18 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 
 export default function () {
-    if(document.querySelector(".deliverySlides")){
-        const deliverySlide = new Swiper('.deliverySlides', {
+    if(document.querySelector(".delivery")){
+        const delivery = new Swiper('.delivery', {
             modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
             loop: true,
             centeredSlides: true,
             effect: "creative",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             pagination: {
-                el: '.paginationBeliverySlides',
+                el: '.delivery-pagination',
                 clickable:true,
             },
             creativeEffect:{
@@ -58,14 +62,14 @@ export default function () {
             }
         });
     }
-    if(document.querySelector(".aboutSlides")){
-        const aboutSlides = new Swiper('.aboutSlides', {
+    if(document.querySelector(".about")){
+        const about = new Swiper('.about', {
             modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
             slidesPerView: 1,
             loop: true,
 
             pagination: {
-                el: '.aboutSlides__pagination',
+                el: '.about-pagination',
                 clickable:true,
             },
             breakpoints: {
@@ -75,7 +79,7 @@ export default function () {
             }
         });
     }
-    const geographySlider = new Swiper('.geographySlider', {
+    const geography = new Swiper('.geography', {
         modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
         effect: "fade",
         loop:true,
@@ -85,7 +89,7 @@ export default function () {
             disableOnInteraction: false,
         },
         pagination: {
-            el: '.geographySlider__pagination',
+            el: '.geography-pagination',
             bulletClass: 'swiper-pagination-bullet-custom',
             bulletActiveClass: 'swiper-pagination-bullet-custom--active',
             renderBullet: function(index, className) {
@@ -105,14 +109,6 @@ export default function () {
                     element.setAttribute("x2", "0");
                 });
                 document.querySelector(".swiper-pagination-bullet-custom.swiper-pagination-bullet-custom--active line")?.setAttribute("x2", "80");
-                // _self.el.addEventListener('mouseenter', function() {
-                //   _self.el.classList.add('swiper--pause');
-                //   _self.autoplay.stop();
-                // });
-                // _self.el.addEventListener('mouseleave', function() {
-                //   _self.el.classList.remove('swiper--pause');
-                //   _self.autoplay.start();
-                // });
             },
             slideChange: function(){
                 document.querySelectorAll(".swiper-pagination-bullet-custom line").forEach(element => {
@@ -134,13 +130,34 @@ export default function () {
                 else if(document.querySelector(".header.close")){
                     header.classList.remove("close");
                 }
-                if (document.querySelector(".fp-viewing-1") && document.querySelector(".geographySlider")) {
-                    geographySlider.slideToLoop(0,0)
+                if (document.querySelector(".fp-viewing-1") && document.querySelector(".geography")) {
+                    geography.slideToLoop(0,0)
                 }
-                if (document.querySelector(".fp-viewing-3") && document.querySelector(".geographySlider")) {
-                    geographySlider.slideToLoop(0,0)
+                if (document.querySelector(".fp-viewing-3") && document.querySelector(".geography")) {
+                    geography.slideToLoop(0,0)
                 }
             },
+        })
+    }
+    if (window.innerWidth <= 1366) {
+        window.addEventListener("scroll", function() {
+          var block_show = null;
+          var wt = $(window).scrollTop();
+          var wh = $(window).height();
+          var et = $('.footer').offset().top;
+          var eh = $('.footer').outerHeight();
+         
+          if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+            if (block_show == null || block_show == false) {
+              header.classList.add("close");
+            }
+            block_show = true;
+          } else {
+            if (block_show == null || block_show == true) {
+              header.classList.remove("close");
+            }
+            block_show = false;
+          }
         })
     }
 }
