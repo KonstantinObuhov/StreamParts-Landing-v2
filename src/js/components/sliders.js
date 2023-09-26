@@ -84,6 +84,7 @@ export default function () {
         modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
         effect: "fade",
         loop:true,
+        grabCursor: true,
         observer: true,
         grabCursor: true,
         autoplay: {
