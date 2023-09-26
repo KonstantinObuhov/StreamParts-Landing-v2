@@ -15,6 +15,7 @@ export default function () {
             loop: true,
             centeredSlides: true,
             effect: "creative",
+            grabCursor: true,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
@@ -67,7 +68,7 @@ export default function () {
             modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
             slidesPerView: 1,
             loop: true,
-
+            grabCursor: true,
             pagination: {
                 el: '.about-pagination',
                 clickable:true,
@@ -83,6 +84,7 @@ export default function () {
         modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
         effect: "fade",
         loop:true,
+        grabCursor: true,
         observer: true,
         autoplay: {
             delay: 5000,
