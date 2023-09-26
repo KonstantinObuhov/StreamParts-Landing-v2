@@ -551,8 +551,9 @@
 }
 .delivery::after{
   content: '';
-  background: #224BB7;
-  filter: blur(34px);
+  background-image: url("/src/img/index/Rectangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   height: 100%;
@@ -561,8 +562,9 @@
 }
 .delivery::before{
   content: '';
-  background: #224BB7;
-  filter: blur(34px);
+  background-image: url("/src/img/index/Rectangle2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   height: 100%;
@@ -580,11 +582,7 @@
     width: 30%;
   }
 }
-@media (width >= 1280px){
-  .delivery::after, .delivery::before{
-    width: 25%;
-  }
-}
+
 
 
 .geography-slide{
