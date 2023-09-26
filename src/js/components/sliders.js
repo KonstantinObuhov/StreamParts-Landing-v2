@@ -86,6 +86,7 @@ export default function () {
         loop:true,
         grabCursor: true,
         observer: true,
+        grabCursor: true,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
