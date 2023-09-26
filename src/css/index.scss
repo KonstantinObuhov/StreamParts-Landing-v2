@@ -68,7 +68,6 @@
   }
   .linkNav.active{
     @apply text-black font-medium;
-    pointer-events: none;
   } 
   .linkNav--white.active{
     @apply text-white;
@@ -126,7 +125,7 @@
     @apply xl:mr-0 lg:mr-0 3xs:mr-0;
   }
   .tab-nav-item.active{
-    @apply bg-white border-white pointer-events-none;
+    @apply bg-white border-white;
   }
   .expanded {
     @apply rounded-xl overflow-hidden
