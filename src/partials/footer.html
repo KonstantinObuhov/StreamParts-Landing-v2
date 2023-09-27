@@ -1,5 +1,5 @@
 <footer class="footer bg-dark">
-  <div class="container containerMin lg:px-[50px] xs:px-[30px] 3xs:px-[12px] mx-auto pt-5 pb-6 3xs:pb-2">
+  <div class="container containerMin lg:px-[50px] xs:px-[30px] 3xs:px-3 mx-auto pt-5 pb-6 3xs:pb-2">
     <div class="flex flex-col md:flex-row md:items-center justify-start md:justify-between pb-4 border-darkSecondary border-b">
       <a href="/" class="block w-[160px] mb-6 md:mb-0">
         <svg viewBox="0 0 160 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,31 +16,34 @@
         </svg>
       </a>
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between">
-        <ul class="md:flex mb-8 sm:mb-0 md:mb-0 mr-10 3xs:hidden">
+        <ul class="md:flex mb-8 sm:mb-0 md:mb-0 mr-4 3xs:hidden">
           <li class="mr-10">
             <a href="./index.html" class="linkNav linkNav--white active">Главная</a>
           </li>
           <li class="border-r border-darkSecondary pr-8">
-            <a href="./about.html" class="text-[#CDCDD1] linkNav linkNav--white">О компании</a>
+            <a href="./about.html" class="text-gray3 linkNav linkNav--white">О компании</a>
+          </li>
+          <li class="border-r border-darkSecondary pr-4">
+            <a href="#" class="text-gray3 linkNav linkNav--white">FAQ</a>
           </li>
         </ul>
         <ul class="flex items-center justify-between">
-          <li class="mb:ml-7 mr-[16px]">
+          <li class="mb:ml-7 mr-4">
             <a href="https://app.streamparts.ru/login"
-              class="max-h-[36px] leading-6 hover:bg-[#c2410c] hover:border-[#c2410c] transition ease-in-out duration-[0.38s] btn-primary px-3.5 pt-[8px] pb-[8px]">
+              class="btn-primary">
               Войти
             </a>
           </li>
-          <li class="text-sm text-white 2lg:mr-8">
-            <a href="" class="max-h-[36px] leading-6 flex border-gray text-white border rounded-lg pt-[8px] pb-[8px] pl-[14px] pr-[14px] items-center text-sm hover:bg-darkBlue hover:border-darkBlue transition ease-in-out duration-[0.38s]">
+          <li class="2lg:mr-8">
+            <a href="#" class="btn-blue-transparent flex items-center text-white max-h-[36px] leading-6 px-3.5 py-2">
               Получить доступ
             </a>
           </li>
         </ul>
       </div>
     </div>
-    <div class="xl:flex flex-col 3xs:flex-row 3xs:flex-row-reverse 3xs:justify-between 3xs:items-center">
-      <div class="flex flex-col md:flex-row items-start md:items-center border-darkSecondary border-b xl:border-b-0 xl:py-6 3xs:py-[18px] xl:justify-start 3xs:justify-start">
+    <div class="xl:flex flex-col 3xs:flex-row-reverse 3xs:justify-between 3xs:items-center">
+      <div class="flex flex-col md:flex-row items-start md:items-center border-darkSecondary border-b xl:border-b-0 xl:py-6 3xs:py-5 xl:justify-start 3xs:justify-start">
         <div class="flex items-center text-sm text-white sm:text-center mb-6 md:mb-0 md:mr-6">
           <svg class="mr-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -58,6 +61,13 @@
           </svg>
           <a href="mailto:support@streamparts.ru" class="hover:text-darkBlue ease-in-out duration-[0.38s]">support@streamparts.ru</a>
         </div>
+        <div class="flex md:hidden items-center text-sm text-white sm:text-center mb-6 md:mb-0 md:mr-6">
+          <svg class="ml-[3px] mr-4" width="16" height="16" fill="white" opacity="0.3" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+          </svg>
+          <a href="#" class="hover:text-darkBlue ease-in-out duration-[0.38s]">FAQ</a>
+        </div>
         <div class="flex items-center text-sm text-white sm:text-center">
           <svg class="mr-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -70,10 +80,10 @@
           <span>Санкт-Петербург</span>
         </div>
       </div>
-      <div class="flex xl:flex-row md:flex-row-reverse 3xs:flex-col-reverse items-start md:items-center pt-6 3xs:py-[18px] xl:justify-start 3xs:justify-between">
-        <div class="text-sm text-[#5F5F5F] sm:text-center sm:mb-6 lg:mb-0 xl:mr-6 md:pt-0 3xs:pt-[17px]">© 2019 - 2023 Стримпартс</div>
-        <div class="flex items-center md:border-0 3xs:border-darkSecondary 3xs:border-b 3xs:pb-[17px] md:pb-0 md:w-auto 3xs:w-full 2xs:flex-nowrap 3xs:flex-wrap 3xs:gap-[10px]">
-          <div class="text-sm text-white sm:text-center mb-6 3xs:mb-0 3xs:mr-6">
+      <div class="flex xl:flex-row md:flex-row-reverse 3xs:flex-col-reverse items-start md:items-center pt-6 3xs:py-5 xl:justify-start 3xs:justify-between">
+        <div class="text-sm text-gray6 sm:text-center lg:mb-0 xl:mr-6 md:pt-0 3xs:pt-[17px]">© 2019 - 2023 Стримпартс</div>
+        <div class="flex items-center md:border-0 3xs:border-darkSecondary 3xs:border-b 3xs:pb-4 md:pb-0 md:w-auto 3xs:w-full 2xs:flex-nowrap 3xs:flex-wrap">
+          <div class="text-sm text-white sm:text-center 3xs:mr-6 mb-2.5 2xs:mb-0">
             <a href="#" class="hover:text-darkBlue">Правила сайта</a>
           </div>
           <div class="text-sm text-white sm:text-center">

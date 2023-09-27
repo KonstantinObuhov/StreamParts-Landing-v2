@@ -63,21 +63,32 @@ export default class Sliders {
         }
       }
     });
+
+    $('.delivery-next-btn').on('click', () => {
+      this.deliverySlider.slideNext();
+    })
+
     this.aboutSlider = new Swiper('.about', {
       modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
       slidesPerView: 1,
       loop: true,
       grabCursor: true,
+      direction: 'horizontal',
       pagination: {
         el: '.about-pagination',
         clickable: true,
       },
       breakpoints: {
-        481: {
+        640: {
           direction: 'vertical',
-        },
+        }
       }
     });
+
+    $('.about-slide').on('click', () => {
+      this.aboutSlider.slideNext();
+    })
+
     this.geographySlider = new Swiper('.geography', {
       modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
       effect: "fade",
@@ -137,7 +148,10 @@ export default class Sliders {
             geographySlider.slideToLoop(0, 0)
           }*/
         }
-      })
+      });
+      $('.move-down').on('click', () => {
+        this.fullPageSlider.moveSectionDown();
+      });
     }
 
     if (window.innerWidth <= 1366) {

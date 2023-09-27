@@ -19,8 +19,14 @@ module.exports = {
       graySecondary: "#E6E6E6",
       orange: "#ff4f32",
       orangeSecondary: "#FF5C00",
+      orangeDark: "#c2410c",
       darkBlue: "#224BB7",
       gray2: "#EBEDF2",
+      gray3: "#CDCDD1",
+      gray4: "#69696B",
+      gray5: "#E6E6EB",
+      gray6: "#5F5F5F",
+      gray7: "#DCE0E8"
     },
     extend: {
       fontFamily: {

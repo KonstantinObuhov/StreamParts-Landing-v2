@@ -60,12 +60,16 @@
 @tailwind utilities;
 
 @layer components {
+  .translate-z-0 {
+    transform: translateZ(0);
+  }
+
   .linkNav {
-    @apply text-[#69696B] transition ease-in-out duration-[0.38s] hover:text-black
+    @apply text-gray4 transition ease-in-out duration-[0.38s] hover:text-black
   }
 
   .linkNav--white {
-    @apply text-[#CDCDD1] hover:text-white;
+    @apply text-gray3 hover:text-white;
   }
 
   .linkNav.active {
@@ -81,30 +85,13 @@
   }
 
   .btn-primary {
-    @apply border border-orange text-center text-sm rounded-lg bg-orange text-white;
+    @apply max-h-9 px-3.5 py-2 border border-orange text-center text-sm leading-6 text-white rounded-lg bg-orange
+    hover:bg-orangeDark hover:border-orangeDark transition ease-in-out duration-[0.38s];
   }
 
-  .btn-more {
-    @apply text-black hover:text-white border border-darkBlue/[0.1]
-    bg-white hover:bg-blue font-medium rounded-xl text-base text-center;
-  }
-
-  .btn-more svg {
-    @apply fill-blue;
-  }
-
-  .btn-more:hover svg {
-    @apply fill-white;
-  }
-
-  .section-head {
-    @apply font-pro text-black text-[1.6rem] lg:text-5xl font-normal;
-  }
-
-  .circle-counter {
-    @apply inline-block w-[32px] h-[32px] md:w-[38px] md:h-[38px]
-    leading-[32px] md:leading-[38px] font-semibold
-    text-sm md:text-xl rounded-full text-center text-blue bg-blue/20;
+  .btn-blue-transparent {
+    @apply max-h-9 px-3.5 py-2 border border-gray text-center text-sm leading-6 text-black rounded-lg hover:bg-darkBlue
+    hover:border-darkBlue hover:text-white transition ease-in-out duration-[0.38s];
   }
 
   .list-item-square {
@@ -113,7 +100,6 @@
 
   .tabs {
     @apply w-full 2xl:mt-[50px] 3xs:mt-[15px];
-
   }
 
   .tab-nav-items {
@@ -121,7 +107,7 @@
   }
 
   .tab-nav-item {
-    @apply cursor-pointer border-[#DCE0E8] border-[1px] xl:mr-7 lg:mr-[40px] lg:mt-[0px] 3xs:mt-[15px] 3xs:mr-[15px] rounded-xl p-6 flex flex-col justify-between xl:w-[18%] lg:w-[25%] 3xs:w-[48%] transition ease-in-out duration-[0.38s] hover:bg-[#DCE0E8];
+    @apply cursor-pointer border-gray7 border-[1px] xl:mr-7 lg:mr-[40px] lg:mt-[0px] 3xs:mt-[15px] 3xs:mr-[15px] rounded-xl p-6 flex flex-col justify-between xl:w-[18%] lg:w-[25%] 3xs:w-[48%] transition ease-in-out duration-[0.38s] hover:bg-gray7;
   }
 
   .tab-nav-item:nth-child(2n) {
@@ -140,7 +126,6 @@
     @apply rounded-xl overflow-hidden
     md:border-none md:rounded-none md:bg-transparent md:overflow-auto;
   }
-
 
   .tab-content {
     @apply hidden lg:mt-[50px] 3xs:mt-[30px];
@@ -578,7 +563,7 @@
 
 .delivery::after {
   content: '';
-  background-image: url("/src/img/index/Rectangle.svg");
+  background-image: url("/src/img/left-blue-blur.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -591,7 +576,7 @@
 
 .delivery::before {
   content: '';
-  background-image: url("/src/img/index/Rectangle2.svg");
+  background-image: url("/src/img/right-blue-blur.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -678,7 +663,6 @@
   cursor: pointer;
   @apply 2xl:pb-7 3xs:pb-3;
 }
-
 
 .geography-pagination .swiper-pagination-bullet-custom:not(:last-child) {
   margin-right: 14px;
@@ -776,7 +760,7 @@
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   top: 18px;
   right: 16px;
-  background-image: url("/src/img/chevron.svg");
+  background-image: url("/src/img/icons/chevron.svg");
   width: 23px;
   height: 23px;
   background-repeat: no-repeat;
