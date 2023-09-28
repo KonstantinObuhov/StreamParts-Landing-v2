@@ -18,7 +18,7 @@ export default class Sliders {
       effect: "creative",
       grabCursor: true,
       autoplay: {
-        delay: 2500,
+        delay: 4000,
         disableOnInteraction: false,
       },
       pagination: {
@@ -66,7 +66,11 @@ export default class Sliders {
 
     $('.delivery-next-btn').on('click', () => {
       this.deliverySlider.slideNext();
-    })
+    });
+
+    $('.delivery-slide').on('click', () => {
+      this.deliverySlider.slideNext();
+    });
 
     this.aboutSlider = new Swiper('.about', {
       modules: [Autoplay, Pagination, FadeEffect, CreativeEffect],
@@ -132,9 +136,14 @@ export default class Sliders {
     let header = this.header;
     let geographySlider = this.geographySlider;
 
+    $('.geography-slide').on('click', () => {
+      this.geographySlider.slideNext();
+    })
+
     if (window.innerWidth > 1366) {
       this.fullPageSlider = fullpage('#fullpage', {
         navigation: false,
+        //scrollOverflow: true,
         onLeave(anchor, index, nextIndex, direction, destination) {
           if (index.isLast === true) {
             header.classList.add("close");
