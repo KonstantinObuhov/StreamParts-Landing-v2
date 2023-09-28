@@ -525,6 +525,10 @@
 }
 
 /*sliders*/
+.gradient::after {
+  background: linear-gradient(0deg, #FFF 1.45%, rgba(255, 255, 255, 0.00) 45.13%);
+}
+
 .geography .swiper-wrapper {
   z-index: -1;
 }

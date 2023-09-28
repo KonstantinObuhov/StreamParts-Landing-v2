@@ -72,4 +72,4 @@ export default class Tabs {
     }
     return $($(`[data-template="${state.id}"]`).html());
   }
-};
+}

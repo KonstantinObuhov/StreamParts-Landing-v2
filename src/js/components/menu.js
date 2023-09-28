@@ -11,4 +11,4 @@ export default class Menu {
       this.menu.classList.toggle('open');
     });
   }
-};
+}
