@@ -44,11 +44,12 @@ module.exports = {
         "lg": "1024px",
         "xl": "1280px",
         "2xl": "1366px",
+        "3xl": "1440px",
+        "4xl": "1690px",
       },
     },
     plugins: [
-      require('autoprefixer'),
-      require('select2'),
+      require('autoprefixer')
     ],
   },
 };
