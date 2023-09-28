@@ -143,19 +143,12 @@ export default class Sliders {
     if (window.innerWidth > 1366) {
       this.fullPageSlider = fullpage('#fullpage', {
         navigation: false,
-        //scrollOverflow: true,
         onLeave(anchor, index, nextIndex, direction, destination) {
           if (index.isLast === true) {
             header.classList.add("close");
           } else if (document.querySelector(".header.close")) {
             header.classList.remove("close");
           }
-          /*if (document.querySelector(".fp-viewing-1") && document.querySelector(".geography")) {
-            geographySlider.slideToLoop(0, 0)
-          }
-          if (document.querySelector(".fp-viewing-3") && document.querySelector(".geography")) {
-            geographySlider.slideToLoop(0, 0)
-          }*/
         }
       });
       $('.move-down').on('click', () => {
